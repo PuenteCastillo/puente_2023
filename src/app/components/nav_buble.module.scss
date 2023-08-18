@@ -1,0 +1,44 @@
+.main_bubble {
+  background-color: white;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-right: -90px;
+  padding: 0px 15px;
+  border-radius: 50px;
+
+  -webkit-box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.26);
+  -moz-box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.26);
+  box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.26);
+
+  // on devices 1600px and down hide
+  @media (max-width: 1600px) {
+    display: none;
+  }
+  .bubble {
+    margin-bottom: 25px;
+    margin-top: 25px;
+    img {
+      //   opacity: 0.5;
+      color: red;
+      fill: red;
+    }
+    a {
+      // on hover
+      &:hover {
+        color: #1a1a1a;
+        img {
+          //change icon outline to be #03b4e0;
+          color: #03b4e0;
+          fill: red;
+        }
+      }
+    }
+  }
+  .custom_tooltip {
+    width: fit-content;
+    min-width: 100px;
+    background-color: #03b4e0;
+    text-align: center;
+  }
+}
