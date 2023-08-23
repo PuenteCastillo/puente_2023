@@ -8,21 +8,16 @@ import { usePathname } from "next/navigation";
 
 export default function PageSlider(props: React.PropsWithChildren<unknown>) {
   // animation toggle
-  const [animate, setAnimate] = useState(false);
-
-  const toggleAnimation = () => {
-    setAnimate(!animate);
-  };
 
   return (
     <>
-      <AnimatePresence mode="wait">
+      <AnimatePresence mode="wait" initial={false}>
         <motion.div
           className={`content_container bg-white  col-span-12 lg:col-span-8  xl:col-span-9 shadow-lg ${styles.content}`}
           // shake animation
-          initial={{ x: 100 }}
+          initial={{ x: -350 }}
           animate={{ x: 0 }}
-          exit={{ x: 100 }}
+          // exit={{ x: 100 }}
           transition={{ duration: 0.1 }}
         >
           {props.children}

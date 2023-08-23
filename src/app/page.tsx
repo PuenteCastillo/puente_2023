@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import styles from "./page.module.scss";
 import PageSlider from "./components/PageSlider";
 import Home_header from "./components/home/Home_header";

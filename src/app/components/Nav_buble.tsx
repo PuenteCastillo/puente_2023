@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import styles from "./nav_buble.module.scss";
 import { Button, Tooltip } from "flowbite-react";
@@ -7,22 +9,49 @@ import Home from "../../../images/wrestling-wrestler-svgrepo-com.svg";
 import Resume from "../../../images/document-viewer-svgrepo-com.svg";
 import Portfolio from "../../../images/portfolio-svgrepo-com.svg";
 import Contact from "../../../images/mail-svgrepo-com.svg";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Nav_buble() {
   return (
-    <div className={styles.main_bubble}>
-      <div className={styles.bubble}>
+    <motion.div
+      initial={{ height: 82 }}
+      animate={{ height: 250 }}
+      transition={{ duration: 0.8, delay: 0.5 }}
+      className={styles.main_bubble}
+    >
+      <div className={`group relative ${styles.bubble}`}>
         <Link href="/">
           <Image src={Home} alt="home Icon" width={30} height={30} />
         </Link>
+        <span
+          className={`absolute right-12 top-0 scale-0  rounded bg-gray-800 p-2 text-xs text-white group-hover:scale-100 ${styles.custom_tooltip}`}
+        >
+          Home
+        </span>
       </div>
-      <div className={styles.bubble}>
+
+      <motion.div
+        initial={{ y: -50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.3, delay: 0.5 }}
+        className={`group relative ${styles.bubble}`}
+      >
         <Link href="/resume">
           <Image src={Resume} alt="resume Icon" width={30} height={30} />
         </Link>
-      </div>
+        <span
+          className={`absolute right-12 top-0 scale-0  rounded bg-gray-800 p-2 text-xs text-white group-hover:scale-100 ${styles.custom_tooltip}`}
+        >
+          Resume
+        </span>
+      </motion.div>
 
-      <div className={`group relative ${styles.bubble}`}>
+      <motion.div
+        initial={{ y: -50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.3, delay: 0.8 }}
+        className={`group relative ${styles.bubble}`}
+      >
         <Link href="/work">
           <Image src={Portfolio} alt="portfolio Icon" width={30} height={30} />
         </Link>
@@ -31,9 +60,14 @@ export default function Nav_buble() {
         >
           Portfolio
         </span>
-      </div>
+      </motion.div>
 
-      <div className={`group relative ${styles.bubble}`}>
+      <motion.div
+        initial={{ y: -50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.3, delay: 1.1 }}
+        className={`group relative ${styles.bubble}`}
+      >
         <Link href="/contact">
           <Image src={Contact} alt="contact Icon" width={30} height={30} />
         </Link>
@@ -42,7 +76,7 @@ export default function Nav_buble() {
         >
           Contact
         </span>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }

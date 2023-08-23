@@ -7,7 +7,7 @@
     width: 1380px;
     max-width: 90vw;
     height: 902px;
-    max-height: 80vh;
+    max-height: 90vh;
     margin: auto;
     border-radius: 30px;
     // overflow: hidden;
@@ -40,7 +40,7 @@
       @media (max-width: 1024px) {
         // remove border radius
         border-radius: 0px;
-        padding-top: 100px;
+        padding-top: 50px;
       }
     }
 

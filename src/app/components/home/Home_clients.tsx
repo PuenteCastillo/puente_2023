@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { use } from "react";
 import styles from "./home.module.scss";
 import Image from "next/image";
 import Callaway from "../../../../images/clients/callaway.png";
@@ -6,13 +8,19 @@ import Kbs from "../../../../images/clients/KBS.png";
 import Little_caesars from "../../../../images/clients/little_caesars.png";
 import Qualcomm from "../../../../images/clients/qualcomm.png";
 import Qualtrics from "../../../../images/clients/qualtrics.png";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useRef, useEffect } from "react";
 
 export default function Home_clients() {
   return (
-    <section id={styles.Home_clients} className={styles.section_div}>
+    <section
+      id={styles.Home_clients}
+      className={`home_clients ${styles.section_div}`}
+    >
       <h2>
-        Clients <span> I work With</span>
+        Clients <span> I&lsquo;ve worked with</span>
       </h2>
+
       <div className=" mt-16">
         <div className="grid grid-cols-2 md:grid-cols-5">
           <div className={` flex border-r-2 mb-16 h-24`}>

@@ -6,7 +6,7 @@ import Dots from "../../../images/dotpattern.jpeg";
 import styles from "./mobile_sidebar.module.scss";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, stagger } from "framer-motion";
 
 import LinkedIn from "../../../images/linkedin-in.svg";
 import Instagram from "../../../images/instagram.svg";
@@ -65,6 +65,8 @@ const imageMotion = {
   },
 };
 
+const staggerMenuItems = stagger(0.1, { startDelay: 0.15 });
+
 export default function SibebarContents() {
   const pathname = usePathname();
   return (
@@ -102,37 +104,124 @@ export default function SibebarContents() {
           </motion.div>
         </motion.div>
 
-        <div className={styles.title_row}>
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 5,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              duration: 0.3,
+              delay: 0.1,
+              type: "tween",
+              ease: "easeIn",
+            },
+          }}
+          className={styles.title_row}
+        >
           <h1>J.P Castillo</h1>
           <h2>software engineer</h2>
-        </div>
+        </motion.div>
 
         <div className={styles.links}>
-          <Link
-            href="/"
-            replace
-            className={pathname == "/" ? styles.active : "close_trigger"}
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 5,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                duration: 0.3,
+                delay: 0.1,
+                type: "tween",
+                ease: "easeIn",
+              },
+            }}
           >
-            Home
-          </Link>
-          <Link
-            href="/resume"
-            replace
-            className={pathname == "/resume" ? styles.active : "close_trigger"}
+            <Link
+              href="/"
+              replace
+              className={pathname == "/" ? styles.active : "close_trigger"}
+            >
+              Home
+            </Link>
+          </motion.div>
+
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 5,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                duration: 0.3,
+                delay: 0.3,
+                type: "tween",
+                ease: "easeIn",
+              },
+            }}
           >
-            Resume
-          </Link>
-          <Link
-            href="#"
-            replace
-            className={
-              pathname == "/portfolio" ? styles.active : "close_trigger"
-            }
+            <Link
+              href="/resume"
+              replace
+              className={
+                pathname == "/resume" ? styles.active : "close_trigger"
+              }
+            >
+              Resume
+            </Link>
+          </motion.div>
+
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 5,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                duration: 0.3,
+                delay: 0.6,
+                type: "tween",
+                ease: "easeIn",
+              },
+            }}
           >
-            Portfolio
-          </Link>
+            <Link
+              href="/work"
+              replace
+              className={
+                pathname == "/portfolio" ? styles.active : "close_trigger"
+              }
+            >
+              Portfolio
+            </Link>
+          </motion.div>
         </div>
-        <div className={styles.socials}>
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 5,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              duration: 0.3,
+              delay: 0.9,
+              type: "tween",
+              ease: "easeIn",
+            },
+          }}
+          className={styles.socials}
+        >
           <Link
             href="https://www.linkedin.com/in/alex-smith-1b1b1b1b1/"
             target="_blank"
@@ -145,7 +234,7 @@ export default function SibebarContents() {
           <Link href="#">
             <Image src={Github} alt="github" width={20} height={20} />
           </Link>
-        </div>
+        </motion.div>
         <div className={styles.footer}>
           <p>© 2021 J.P Castillo </p>
         </div>
