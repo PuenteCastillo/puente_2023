@@ -7,10 +7,15 @@ import styles from "./mobile_sidebar.module.scss";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence, stagger } from "framer-motion";
+import Me from "../../../images/memyselfandI.webp";
 
 import LinkedIn from "../../../images/linkedin-in.svg";
 import Instagram from "../../../images/instagram.svg";
 import Github from "../../../images/github.svg";
+
+import Pin from "../../../images/location-pin-solid.svg";
+import Phone from "../../../images/phone-solid.svg";
+import Email from "../../../images/envelope-solid.svg";
 
 const textMotion = {
   rest: {
@@ -72,38 +77,37 @@ export default function SibebarContents() {
   return (
     <>
       <div className={styles.sidebar}>
-        <motion.div
-          className={styles.avatar_container}
-          whileHover="hover"
-          initial="initial"
-          animate="rest"
-        >
+        <Link href="/">
           <motion.div
-            className={styles.avatar}
-            // initial={{ opacity: 0, x: -10, y: -5 }}
-            // animate={{ opacity: 1, x: 0, y: 0 }}
-            // transition={{ duration: 0.3 }}
-            // hover
-            variants={textMotion}
+            className={styles.avatar_container}
+            whileHover="hover"
+            initial="initial"
+            animate="rest"
           >
-            <Image
-              src={Dots}
-              className={styles.dots}
-              alt="dots-bg"
-              width={200}
-              height={200}
-            />
+            <motion.div
+              className={styles.avatar}
+              // initial={{ opacity: 0, x: -10, y: -5 }}
+              // animate={{ opacity: 1, x: 0, y: 0 }}
+              // transition={{ duration: 0.3 }}
+              // hover
+              variants={textMotion}
+            >
+              <Image
+                src={Dots}
+                className={styles.dots}
+                alt="dots-bg"
+                width={200}
+                height={200}
+              />
+            </motion.div>
+            <motion.div
+              variants={imageMotion}
+              className={styles.featured_image}
+            >
+              <Image src={Me} alt="avatar" width={200} height={250} />
+            </motion.div>
           </motion.div>
-          <motion.div variants={imageMotion} className={styles.featured_image}>
-            <Image
-              src="https://picsum.photos/200/300"
-              alt="avatar"
-              width={200}
-              height={200}
-            />
-          </motion.div>
-        </motion.div>
-
+        </Link>
         <motion.div
           initial={{
             opacity: 0,
@@ -198,7 +202,7 @@ export default function SibebarContents() {
               href="/work"
               replace
               className={
-                pathname == "/portfolio" ? styles.active : "close_trigger"
+                pathname == "/work" ? styles.active : "close_triggerTwo"
               }
             >
               Portfolio
@@ -223,20 +227,52 @@ export default function SibebarContents() {
           className={styles.socials}
         >
           <Link
-            href="https://www.linkedin.com/in/alex-smith-1b1b1b1b1/"
+            href="https://www.linkedin.com/in/puentecastillo//"
             target="_blank"
           >
             <Image src={LinkedIn} alt="linkedin" width={20} height={20} />
           </Link>
-          <Link href="#">
+          <Link
+            href="https://instagram.com/polaroid_puente?igshid=MmIzYWVlNDQ5Yg=="
+            target="_blank"
+          >
             <Image src={Instagram} alt="instagram" width={20} height={20} />
           </Link>
           <Link href="#">
             <Image src={Github} alt="github" width={20} height={20} />
           </Link>
         </motion.div>
+
         <div className={styles.footer}>
-          <p>© 2021 J.P Castillo </p>
+          <div className="container mt-20">
+            <div className={styles.contact_info}>
+              <Link
+                href="mailto:josepuente2013@gmail.com?subject=Hey%2C%20JP%20Nice%20Website!%20Let's%20chat.."
+                className="flex mt-5 md:mt-8 text-white"
+              >
+                <Image src={Email} alt="Email" width={15} height={15} />
+                <p className="ml-3">josepuente2013@gmail.com</p>
+              </Link>
+              <Link
+                href="tel:9494660042"
+                className="flex mt-5 md:mt-8 text-white"
+              >
+                <Image src={Phone} alt="Phone" width={15} height={15} />
+                <p className="ml-3"> 949 466 0042 </p>
+              </Link>
+              <div className="flex mt-5 md:mt-8 text-white">
+                <Image
+                  src={Pin}
+                  alt="Pin"
+                  width={15}
+                  height={15}
+                  className=""
+                />
+                <p className="ml-3"> Planet Earth </p>
+              </div>
+              <p className="mt-5 md:mt-8">© 2021 J.P Castillo </p>
+            </div>
+          </div>
         </div>
       </div>
     </>

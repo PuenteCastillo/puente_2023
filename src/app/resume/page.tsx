@@ -87,7 +87,7 @@ export default function resume() {
                   date="2023-2017"
                   title="The Crab Cooker"
                   titleTwo="Server"
-                  description="Not all can be Code... At the Crabcooker i worked as a seerver. I learned a lot about customer service and how to work with a team."
+                  description="Not all can be code... At the Crabcooker I worked as a seerver. I learned a lot about customer service and how to work with a team."
                   delay={0.3}
                 />
 
@@ -96,18 +96,14 @@ export default function resume() {
                   date="2017"
                   title="University of California Irvine"
                   titleTwo="FullStack Development"
-                  description="Maecenas finibus nec sem ut imperdiet. Ut tincidunt est ac dolor
-            aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in,
-            lobortis ante."
+                  description=" At UCI I learned the fundamentals of web development. I learned how to work with a team and how to work with clients. I learned how to work with a team and how to work with clients."
                   delay={0.4}
                 />
                 <Content_box
                   date="2015"
                   title="Orange Coast College"
                   titleTwo="Marketing and Business"
-                  description="Maecenas finibus nec sem ut imperdiet. Ut tincidunt est ac dolor
-            aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in,
-            lobortis ante."
+                  description=" At OCC I learned the importance of marketing and the power of interpersonal skills. You can create the best product in the world but with out a good marketing strategy it will never be seen."
                   delay={0.5}
                 />
               </div>

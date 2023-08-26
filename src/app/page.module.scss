@@ -68,3 +68,15 @@
   height: 100vh;
   z-index: -100;
 }
+.bg_container {
+  background-color: #e8eef2;
+  img {
+    position: fixed;
+    // background-color: #e8eef2;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -100;
+  }
+}

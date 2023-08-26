@@ -1,19 +1,7 @@
 import Image from "next/image";
 import PageSlider from "../components/PageSlider";
 import styles from "./page.module.scss";
-import Kbs from "../../../images/projects/kbs_img.webp";
-import LittleCaesars from "../../../images/projects/Little_Ceasars.webp";
-import Xmiimage from "../../../images/projects/xmiimage.webp";
-import Callaway from "../../../images/projects/callaway.webp";
-import Drakes from "../../../images/projects/drakes.webp";
-import Origin from "../../../images/projects/origenmade.jpeg";
-
-// ads
-
-import Ody from "./ads/Ody";
-import Stokelab from "./ads/Stokelab";
-import TrippleTrack from "./ads/TrippleTrack";
-import Chromesoft from "./ads/Chromesoft";
+import Arrow from "../../../images/arrow-right-solid.svg";
 
 import Ad_carousel from "./ad_carousel";
 import Website_gal from "./website_gal";
@@ -26,9 +14,24 @@ export default function work() {
           <h1> Portfolio </h1>
         </section>
         <div id={styles.Advertising}>
-          <section id="#ad_container" className="container">
-            <h2> Advertising </h2>
-            <span className=" text-right justify-end "> -- </span>
+          <section
+            id="#ad_container"
+            className="container flex justify-between"
+          >
+            <div>
+              <h2> Advertising </h2>
+            </div>
+
+            <div className=" flex  content-center opacity-40">
+              <p className="  pt-1">Scroll</p>
+              <Image
+                src={Arrow}
+                alt="arrow"
+                width={15}
+                height={15}
+                className="ml-3"
+              />
+            </div>
           </section>
           <div
             className={`flex overflow-x-scroll pb-10 hide-scroll-bar mt-10 ${styles.hide_scroll}`}

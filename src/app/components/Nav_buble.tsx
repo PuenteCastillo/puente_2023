@@ -9,6 +9,7 @@ import Home from "../../../images/wrestling-wrestler-svgrepo-com.svg";
 import Resume from "../../../images/document-viewer-svgrepo-com.svg";
 import Portfolio from "../../../images/portfolio-svgrepo-com.svg";
 import Contact from "../../../images/mail-svgrepo-com.svg";
+import Download_icon from "../../../images/download.png";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Nav_buble() {
@@ -68,13 +69,19 @@ export default function Nav_buble() {
         transition={{ duration: 0.3, delay: 1.1 }}
         className={`group relative ${styles.bubble}`}
       >
-        <Link href="/contact">
-          <Image src={Contact} alt="contact Icon" width={30} height={30} />
+        <Link href="/JP_Castillo.pdf" target="_blank">
+          <Image
+            src={Download_icon}
+            alt="contact Icon"
+            width={25}
+            height={25}
+            className=" opacity-40"
+          />
         </Link>
         <span
           className={`absolute right-12 top-0 scale-0  rounded bg-gray-800 p-2 text-xs text-white group-hover:scale-100 ${styles.custom_tooltip}`}
         >
-          Contact
+          Downlaod CV
         </span>
       </motion.div>
     </motion.div>

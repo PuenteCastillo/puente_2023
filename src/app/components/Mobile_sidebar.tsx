@@ -15,13 +15,20 @@ export default function Mobile_sidebar() {
 
     let content_container =
       document.querySelector(".content_container") || undefined;
-    let close_trigger = document.querySelector(".close_trigger") || undefined;
+    let close_trigger: any = document.querySelector(".close_trigger");
+    let close_triggerTwo: any = document.querySelector(".close_triggerTwo");
 
     content_container?.addEventListener("click", () => {
       setSidebar(false);
     });
 
     close_trigger?.addEventListener("click", () => {
+      console.log("clicked");
+      setSidebar(false);
+    });
+
+    close_triggerTwo?.addEventListener("click", () => {
+      console.log("clicked");
       setSidebar(false);
     });
 

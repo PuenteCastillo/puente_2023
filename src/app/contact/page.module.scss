@@ -1,0 +1,235 @@
+.work {
+  h1 {
+    color: #222;
+    font-size: 32px;
+    font-family: "Poppins", Helvetica, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    // add image after
+    position: relative;
+  }
+  h2 {
+    color: #222;
+    font-size: 21px;
+    font-family: "Poppins", Helvetica, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    // add image after
+    position: relative;
+  }
+  h3 {
+    font-size: 16px;
+    color: #222;
+    font-family: "Poppins", Helvetica, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    // add image after
+    position: relative;
+  }
+  h4 {
+    font-size: 14px;
+    color: #222;
+    font-family: "Poppins", Helvetica, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    // add image after
+    position: relative;
+  }
+  p {
+    font-family: "Poppins", Helvetica, sans-serif;
+    font-size: 0.92em;
+    font-weight: 0;
+    font-style: normal;
+    line-height: 1.75em;
+    color: #555;
+  }
+  small {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.45em;
+    color: #a5a6a7;
+    text-align: right;
+    display: block;
+  }
+  h1::after,
+  h2::after {
+    background-image: -webkit-repeating-radial-gradient(
+      center center,
+      #04b4e0,
+      #04b4e0 1px,
+      transparent 0px,
+      transparent 100%
+    );
+    position: absolute;
+    opacity: 0.45;
+    top: -10%;
+    left: -12px;
+    content: "";
+    height: 25px;
+    width: 25px;
+    background-size: 6px 6px;
+    z-index: 0;
+  }
+
+  section {
+    max-width: 90%;
+    margin: auto;
+    margin-top: 50px;
+  }
+}
+
+#Resume_Page {
+}
+
+#Advertising {
+  h1 {
+    color: #222;
+    font-size: 32px;
+    font-family: "Poppins", Helvetica, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    // add image after
+    position: relative;
+  }
+
+  h2 {
+    color: #222;
+    font-size: 21px;
+    font-family: "Poppins", Helvetica, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    // add image after
+    position: relative;
+  }
+  h1::after,
+  h2::after {
+    background-image: -webkit-repeating-radial-gradient(
+      center center,
+      #04b4e0,
+      #04b4e0 1px,
+      transparent 0px,
+      transparent 100%
+    );
+    position: absolute;
+    opacity: 0.45;
+    top: -10%;
+    left: -12px;
+    content: "";
+    height: 25px;
+    width: 25px;
+    background-size: 6px 6px;
+    z-index: 0;
+  }
+  section {
+    max-width: 90%;
+    margin: auto;
+    margin-top: 50px;
+  }
+  .box {
+    background-color: red;
+    position: relative;
+    overflow: hidden;
+    width: 320px;
+    height: 480px;
+    background-color: white;
+    border-radius: 10px;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    transition: 0.5s;
+  }
+
+  .stokelabBox {
+    background-color: red;
+    position: relative;
+    overflow: hidden;
+    width: 300px;
+    height: 250px;
+    background-color: white;
+    border-radius: 10px;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    svg {
+      position: absolute;
+    }
+    transition: 0.5s;
+
+    #stokelab_bg {
+      background-color: rgb(255, 198, 0);
+      margin-top: -10em;
+      margin-left: -8em;
+      width: 40em;
+      height: 40em;
+      position: absolute;
+    }
+  }
+
+  .TrippleTrackBox {
+    border: 0.1px solid rgb(193, 193, 193);
+    position: relative;
+    overflow: hidden;
+    width: 320px;
+    height: 480px;
+    background-color: white;
+    border-radius: 10px;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .ChromesoftBox {
+    position: relative;
+    overflow: hidden;
+    width: 320px;
+    height: 480px;
+    background-color: #e7e7e7;
+    border-radius: 10px;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    #cta1 {
+      // position: absolute;
+      // width: 100px;
+      // height: 100%;
+      // margin-left: 3.8em;
+      // overflow: hidden;
+    }
+    .move_down {
+      margin-top: 15px;
+    }
+    .CS_logo2 {
+      margin-left: -4.8em;
+      opacity: 0;
+    }
+    .main_logo {
+      // background-color: #e7e7e7;
+    }
+  }
+
+  // var adWidth = '320px';
+  // var adHeight = '480px';
+
+  .hide_scroll {
+    // hide scroll bar
+
+    ::-webkit-scrollbar {
+      width: 0px;
+      background: transparent; /* make scrollbar transparent */
+    }
+  }
+}

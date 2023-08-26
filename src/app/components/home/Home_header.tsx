@@ -1,11 +1,21 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import styles from "./home.module.scss";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { saveAs } from "file-saver";
+import Me from "../../../../images/memyselfandI.webp";
 
 export default function Home_header() {
+  // create a download resume function
+  const handleDownload = () => {
+    const fileData: any = "http://localhost:3000/JP_Castillo.pdf";
+    const blob = new Blob([fileData], { type: "application/pdf" });
+    saveAs(blob, "JP_Castillo.pdf"); // Replace with your desired file name and extension
+  };
+
   return (
     <div className={styles.home_header}>
       <AnimatePresence initial={true}>
@@ -19,12 +29,7 @@ export default function Home_header() {
             >
               <div className={styles.child}>
                 <div className={styles.featured_image}>
-                  <Image
-                    src="https://picsum.photos/200/200"
-                    alt="avatar"
-                    width={200}
-                    height={200}
-                  />
+                  <Image src={Me} alt="avatar" width={200} height={250} />
                 </div>
               </div>
             </motion.div>
@@ -49,14 +54,18 @@ export default function Home_header() {
                     techniques and trends.
                   </p>
                   <div className={styles.button_row}>
-                    <button className={`drop-shadow-md ${styles.theme_btn}`}>
-                      Download{" "}
-                    </button>
-                    <button
+                    <Link
+                      href="http://localhost:3000/JP_Castillo.pdf"
+                      target="_blank"
+                      className={`drop-shadow-md ${styles.theme_btn}`}
+                    >
+                      Download CV
+                    </Link>
+                    {/* <button
                       className={`drop-shadow-md ${styles.theme_btn_secoundary}`}
                     >
                       Contact
-                    </button>
+                    </button> */}
                   </div>
                 </motion.div>
               </div>
