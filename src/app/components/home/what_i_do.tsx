@@ -22,7 +22,7 @@ const services = [
     image: Server,
     title: "Backend Development",
     description:
-      "Behind every successful digital experience lies a robust backend foundation. As a backend developer, I specialize in building the server-side logic and databases that power applications. My expertise with Node.js MongoDB, Postgres, and SQL allows me to create scalable and secure systems. I design APIs, manage data storage, and ensure efficient communication between the server and the front end. Crafting efficient and reliable backend solutions is my commitment.",
+      "Behind every successful digital experience lies a robust backend foundation. As a backend developer, I specialize in building the server-side logic and databases that power applications. My expertise with Node.js, MongoDB, and PostgresSQL allows me to create scalable and secure systems. I design APIs, manage data storage, and ensure efficient communication between the server and the front end. Crafting efficient and reliable backend solutions is my commitment.",
     delay: 0.8,
   },
   {
