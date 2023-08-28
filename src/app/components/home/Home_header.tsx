@@ -54,13 +54,13 @@ export default function Home_header() {
                     techniques and trends.
                   </p>
                   <div className={styles.button_row}>
-                    <Link
+                    {/* <Link
                       href="http://localhost:3000/JP_Castillo.pdf"
                       target="_blank"
                       className={`drop-shadow-md ${styles.theme_btn}`}
                     >
                       Download CV
-                    </Link>
+                    </Link> */}
                     {/* <button
                       className={`drop-shadow-md ${styles.theme_btn_secoundary}`}
                     >
