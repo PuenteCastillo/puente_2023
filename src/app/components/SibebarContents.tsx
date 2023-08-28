@@ -238,7 +238,7 @@ export default function SibebarContents() {
           >
             <Image src={Instagram} alt="instagram" width={20} height={20} />
           </Link>
-          <Link href="#">
+          <Link href="https://github.com/PuenteCastillo" target="_blank">
             <Image src={Github} alt="github" width={20} height={20} />
           </Link>
         </motion.div>

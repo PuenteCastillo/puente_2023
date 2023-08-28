@@ -16,7 +16,7 @@ export default function Nav_buble() {
   return (
     <motion.div
       initial={{ height: 82 }}
-      animate={{ height: 190 }}
+      animate={{ height: 250 }}
       transition={{ duration: 0.8, delay: 0.5 }}
       className={styles.main_bubble}
     >
@@ -63,7 +63,7 @@ export default function Nav_buble() {
         </span>
       </motion.div>
 
-      {/* <motion.div
+      <motion.div
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.3, delay: 1.1 }}
@@ -83,7 +83,7 @@ export default function Nav_buble() {
         >
           Downlaod CV
         </span>
-      </motion.div> */}
+      </motion.div>
     </motion.div>
   );
 }
