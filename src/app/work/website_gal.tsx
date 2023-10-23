@@ -11,14 +11,22 @@ import Xmiimage from "../../../images/projects/xmiimage.webp";
 import Callaway from "../../../images/projects/callaway.webp";
 import Drakes from "../../../images/projects/drakes.webp";
 import Origin from "../../../images/projects/origenmade.jpeg";
+import Noble6 from "../../../images/projects/motor.jpg";
+import Lakte from "../../../images/projects/latke.png";
 
 const projects = [
   { name: "KBS", link: "https://kbsgolfshafts.com/", image: Kbs },
   { name: "Drakes", link: "https://drakesorganic.com/", image: Drakes },
   { name: "Qualtrics", link: "https://www.xminstitute.com/", image: Xmiimage },
+  { name: "Noble6", link: "https://noble6.com/", image: Noble6 },
   { name: "Origin", link: "https://origenmade.com/", image: Origin },
   { name: "Callaway", image: Callaway, isButton: true },
   { name: "Little Caesars", link: "#", image: LittleCaesars },
+  {
+    name: "Latke vs Hamantash",
+    link: "https://latkevshamantash.com/",
+    image: Lakte,
+  },
 ];
 
 export default function website_gal() {
@@ -44,7 +52,7 @@ export default function website_gal() {
                   className="object-cover hover:scale-110 transition-all duration-500 ease-in-out  h-64 "
                 />
               </div>
-              <h3>{project.name}</h3>
+              <h3 className="text-center mt-3">{project.name}</h3>
             </Link>
           ) : (
             <button onClick={handleScroll} className="project_container mt-5">
@@ -55,7 +63,7 @@ export default function website_gal() {
                   className="object-cover hover:scale-110 transition-all duration-500 ease-in-out h-64"
                 />
               </div>
-              <h3>{project.name}</h3>
+              <h3 className="text-center mt-3">{project.name}</h3>
             </button>
           )}
         </React.Fragment>
