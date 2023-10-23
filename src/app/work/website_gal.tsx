@@ -13,14 +13,17 @@ import Drakes from "../../../images/projects/drakes.webp";
 import Origin from "../../../images/projects/origenmade.jpeg";
 import Noble6 from "../../../images/projects/motor.jpg";
 import Lakte from "../../../images/projects/latke.png";
+import GolfX from "../../../images/projects/golfx.jpeg";
 
 const projects = [
   { name: "KBS", link: "https://kbsgolfshafts.com/", image: Kbs },
-  { name: "Drakes", link: "https://drakesorganic.com/", image: Drakes },
+
   { name: "Qualtrics", link: "https://www.xminstitute.com/", image: Xmiimage },
-  { name: "Noble6", link: "https://noble6.com/", image: Noble6 },
   { name: "Origin", link: "https://origenmade.com/", image: Origin },
+  { name: "Noble6", link: "https://noble6.com/", image: Noble6 },
   { name: "Callaway", image: Callaway, isButton: true },
+  { name: "Drakes", link: "https://drakesorganic.com/", image: Drakes },
+  { name: "GolfX", link: "https://kbsgolfx.com/", image: GolfX },
   { name: "Little Caesars", link: "#", image: LittleCaesars },
   {
     name: "Latke vs Hamantash",
