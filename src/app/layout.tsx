@@ -26,7 +26,7 @@ export default function RootLayout({
         <Bg_aimations />
         <div className={styles.parent}>
           <div id="main_body" className={`  ${styles.child}`}>
-            <div className={`grid grid-cols-12 ${styles.main_body}`}>
+            <div className={`grid grid-cols-12 ${styles.main_body} `}>
               <div className=" hidden lg:block md:col-span-4 xl:col-span-3 ">
                 <Sidebar />
               </div>

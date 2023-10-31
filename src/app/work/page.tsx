@@ -23,7 +23,7 @@ export default function work() {
             </div>
 
             <div className=" flex  content-center opacity-40">
-              <p className="  pt-1">Scroll</p>
+              <p className="pt-1">Scroll</p>
               <Image
                 src={Arrow}
                 alt="arrow"

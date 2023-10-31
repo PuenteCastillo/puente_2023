@@ -70,7 +70,7 @@ export default function resume() {
                 <Content_box
                   date="2022-2023"
                   title="Dough. Agency"
-                  titleTwo="Sernior Developer"
+                  titleTwo="Lead Full-Stack Developer"
                   description="Developed multiple Web Applications for clients. Worked closely with designers and developers. "
                   delay={0.1}
                 />
@@ -78,7 +78,7 @@ export default function resume() {
                 <Content_box
                   date="2017-2022"
                   title="Taco Truck Creative Agency"
-                  titleTwo="Sernior Developer"
+                  titleTwo="Lead Full-Stack Developer"
                   description="Developed a wide variety of websites and applications for clients. Experience with React, SQL, Node, and more. Worked and managed many developers and designers."
                   delay={0.2}
                 />

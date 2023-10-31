@@ -221,6 +221,30 @@
     }
   }
 
+  .BreakThrough {
+    position: relative;
+    overflow: hidden;
+    width: 320px;
+    height: 480px;
+    background-color: #e62226;
+    border-radius: 10px;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    #cta1 {
+      // position: absolute;
+      // width: 100px;
+      // height: 100%;
+      // margin-left: 3.8em;
+      // overflow: hidden;
+    }
+    .BT_ball {
+      margin-top: 50px;
+    }
+  }
+
   // var adWidth = '320px';
   // var adHeight = '480px';
 
@@ -232,4 +256,13 @@
       background: transparent; /* make scrollbar transparent */
     }
   }
+}
+
+.hide_scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.hide_scroll {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
